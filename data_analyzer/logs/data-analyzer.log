@@ -1,18 +1,18 @@
-2025-06-17 15:39:53 INFO  c.b.d.DataAnalyzerApplication - Starting DataAnalyzerApplication using Java 21.0.7 with PID 34198 (/home/blacklotus/Data-analysis-tool/data_analyzer/target/classes started by blacklotus in /home/blacklotus/Data-analysis-tool/data_analyzer)
-2025-06-17 15:39:53 INFO  c.b.d.DataAnalyzerApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-17 15:39:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-17 15:39:54 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-17 15:39:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-17 15:39:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-17 15:39:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-17 15:39:54 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 530 ms
-2025-06-17 15:39:54 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
-2025-06-17 15:39:54 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
-2025-06-17 15:39:54 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5aea8994]]
-2025-06-17 15:39:54 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
-2025-06-17 15:39:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-17 15:39:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-17 15:39:54 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+2025-06-17 16:09:55 INFO  c.b.d.DataAnalyzerApplication - Starting DataAnalyzerApplication using Java 21.0.7 with PID 42183 (/home/blacklotus/Data-analysis-tool/data_analyzer/target/classes started by blacklotus in /home/blacklotus/Data-analysis-tool/data_analyzer)
+2025-06-17 16:09:55 INFO  c.b.d.DataAnalyzerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-17 16:09:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-17 16:09:55 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-17 16:09:55 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-17 16:09:55 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-17 16:09:55 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-17 16:09:55 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 550 ms
+2025-06-17 16:09:56 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-17 16:09:56 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-06-17 16:09:56 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36551e97]]
+2025-06-17 16:09:56 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-06-17 16:09:56 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-17 16:09:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-17 16:09:56 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -112,289 +112,162 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2025-06-17 15:39:54 INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
-2025-06-17 15:39:54 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
-2025-06-17 15:39:54 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
-2025-06-17 15:39:54 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750189194781
-2025-06-17 15:39:54 INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Subscribed to topic(s): demo-topic
-2025-06-17 15:39:54 INFO  c.b.d.DataAnalyzerApplication - Started DataAnalyzerApplication in 1.437 seconds (process running for 1.592)
-2025-06-17 15:39:54 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:54 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:54 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:55 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:55 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:55 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:55 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:56 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:56 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:56 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:57 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:57 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:57 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:58 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:58 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:39:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:39:59 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:39:59 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:00 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:00 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:00 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:01 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:01 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:01 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:02 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:02 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:02 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:03 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:03 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:03 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:04 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:04 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:04 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:05 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:05 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:05 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:06 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:06 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:06 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-17 15:40:06 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-17 15:40:06 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-06-17 15:40:07 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:07 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:07 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:08 INFO  c.b.d.c.STOMPMessageController - ### Received: sdfgs ###
-2025-06-17 15:40:08 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:08 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:08 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:09 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:09 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:09 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:10 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:10 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:10 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:11 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:11 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:11 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:12 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:12 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:12 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:13 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:13 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:13 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:14 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:14 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:14 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:15 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:15 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:15 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:15 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:15 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:15 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:16 INFO  c.b.d.c.STOMPMessageController - ### Received: sdfgs ###
-2025-06-17 15:40:16 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:16 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:16 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:17 INFO  c.b.d.c.STOMPMessageController - ### Received: sdfg ###
-2025-06-17 15:40:17 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:17 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:17 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:18 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:18 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:18 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:19 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:19 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:19 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:20 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:20 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:20 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:21 INFO  c.b.d.c.STOMPMessageController - ### Received: sdfsdsddsf ###
-2025-06-17 15:40:21 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:21 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:21 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:22 INFO  c.b.d.c.STOMPMessageController - ### Received: sdf ###
-2025-06-17 15:40:22 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:22 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:22 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:23 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:23 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:23 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:24 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:24 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:24 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:25 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:25 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:25 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:26 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:26 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:26 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:27 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:27 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:27 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:28 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:28 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:28 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:29 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:29 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:29 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:30 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:30 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:30 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:31 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:31 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:31 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:32 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:32 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:32 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:33 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:33 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:33 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:34 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:34 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:34 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:35 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:35 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:35 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:36 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:36 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:36 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:37 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:37 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:37 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:38 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:38 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:38 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:39 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:39 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:39 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:40 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:40 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:40 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:41 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:41 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:41 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:42 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:42 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:42 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:43 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:43 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:43 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:44 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:44 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:44 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:45 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:45 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:45 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:46 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:46 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:46 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:47 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:47 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:47 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:47 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:47 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:47 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:48 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:48 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:48 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:49 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:49 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:49 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:50 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:50 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:50 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:51 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:51 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:51 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:52 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:52 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:52 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:53 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:53 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:53 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:54 INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 12, active threads = 0, queued tasks = 0, completed tasks = 21], outboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 2, completed tasks = 11]
-2025-06-17 15:40:54 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:54 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:54 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:55 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:55 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:56 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:56 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:56 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:57 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:57 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:57 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:58 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:58 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:40:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:40:59 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:40:59 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:00 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:00 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:00 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:01 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:01 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:01 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:02 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:02 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:02 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:03 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:03 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:03 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:04 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:04 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:04 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:05 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:05 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:05 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:06 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:06 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:06 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:07 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:07 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:07 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:08 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:08 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:08 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:09 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:09 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:09 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:10 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:10 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:10 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:11 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:11 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:11 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:12 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:12 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:12 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:13 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Node -1 disconnected.
-2025-06-17 15:41:13 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
-2025-06-17 15:41:13 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
-2025-06-17 15:41:13 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-06-17 15:41:13 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Request joining group due to: consumer pro-actively leaving the group
-2025-06-17 15:41:13 INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Unsubscribed all topics or patterns and assigned partitions
-2025-06-17 15:41:13 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Resetting generation and member id due to: consumer pro-actively leaving the group
-2025-06-17 15:41:13 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Request joining group due to: consumer pro-actively leaving the group
-2025-06-17 15:41:13 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2025-06-17 15:41:13 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2025-06-17 15:41:13 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2025-06-17 15:41:13 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2025-06-17 15:41:13 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-demo-group-1 unregistered
-2025-06-17 15:41:13 INFO  o.s.k.l.KafkaMessageListenerContainer - demo-group: Consumer stopped
-2025-06-17 15:41:13 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-17 15:41:13 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-17 15:41:13 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
-2025-06-17 15:41:13 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5aea8994]]
-2025-06-17 15:41:13 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-06-17 16:09:56 INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-06-17 16:09:56 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-06-17 16:09:56 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-06-17 16:09:56 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750190996477
+2025-06-17 16:09:56 INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Subscribed to topic(s): demo-topic
+2025-06-17 16:09:56 INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2025-06-17 16:09:56 INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#58ae402b:0/SimpleConnection@42576db9 [delegate=amqp://user@127.0.0.1:5672/, localPort=51960]
+2025-06-17 16:09:56 INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (demo-queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-06-17 16:09:56 INFO  c.b.d.DataAnalyzerApplication - Started DataAnalyzerApplication in 1.533 seconds (process running for 1.689)
+2025-06-17 16:09:56 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Cluster ID: UVRDCtiGSQGXADXEXh2B2w
+2025-06-17 16:09:56 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-17 16:09:56 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] (Re-)joining group
+2025-06-17 16:09:56 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Request joining group due to: need to re-join with the given member-id: consumer-demo-group-1-a63b2710-eb5e-47cd-883c-e2ecfed4c000
+2025-06-17 16:09:56 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] (Re-)joining group
+2025-06-17 16:09:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Successfully joined group with generation Generation{generationId=6, memberId='consumer-demo-group-1-a63b2710-eb5e-47cd-883c-e2ecfed4c000', protocol='range'}
+2025-06-17 16:09:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Finished assignment for group at generation 6: {consumer-demo-group-1-a63b2710-eb5e-47cd-883c-e2ecfed4c000=Assignment(partitions=[demo-topic-0])}
+2025-06-17 16:09:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Successfully synced group in generation Generation{generationId=6, memberId='consumer-demo-group-1-a63b2710-eb5e-47cd-883c-e2ecfed4c000', protocol='range'}
+2025-06-17 16:09:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Notifying assignor about the new Assignment(partitions=[demo-topic-0])
+2025-06-17 16:09:59 INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Adding newly assigned partitions: demo-topic-0
+2025-06-17 16:09:59 INFO  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition demo-topic-0 to the committed offset FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2025-06-17 16:09:59 INFO  o.s.k.l.KafkaMessageListenerContainer - demo-group: partitions assigned: [demo-topic-0]
+2025-06-17 16:10:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-17 16:10:03 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-17 16:10:03 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-17 16:10:24 INFO  c.b.d.c.STOMPMessageController - ### Received: yolo ###
+2025-06-17 16:10:36 INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = data-analyzer-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-17 16:10:36 INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-06-17 16:10:36 INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=data-analyzer-producer-1] Instantiated an idempotent producer.
+2025-06-17 16:10:36 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-06-17 16:10:36 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-06-17 16:10:36 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750191036690
+2025-06-17 16:10:36 INFO  org.apache.kafka.clients.Metadata - [Producer clientId=data-analyzer-producer-1] Cluster ID: UVRDCtiGSQGXADXEXh2B2w
+2025-06-17 16:10:36 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=data-analyzer-producer-1] ProducerId set to 2000 with epoch 0
+2025-06-17 16:10:36 INFO  c.b.d.kafka.KafkaConsumerListener - ### Received: Hello+Kafka%21= ###
+2025-06-17 16:10:41 INFO  c.b.d.kafka.KafkaConsumerListener - ### Received: Hello+Kafka%21= ###
+2025-06-17 16:10:41 INFO  c.b.d.kafka.KafkaConsumerListener - ### Received: Hello+Kafka%21= ###
+2025-06-17 16:10:46 INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-06-17 16:10:47 INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Revoke previously assigned partitions demo-topic-0
+2025-06-17 16:10:47 INFO  o.s.k.l.KafkaMessageListenerContainer - demo-group: partitions revoked: [demo-topic-0]
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Member consumer-demo-group-1-a63b2710-eb5e-47cd-883c-e2ecfed4c000 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Request joining group due to: consumer pro-actively leaving the group
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Unsubscribed all topics or patterns and assigned partitions
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-17 16:10:47 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-demo-group-1, groupId=demo-group] Request joining group due to: consumer pro-actively leaving the group
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-06-17 16:10:47 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-demo-group-1 unregistered
+2025-06-17 16:10:47 INFO  o.s.k.l.KafkaMessageListenerContainer - demo-group: Consumer stopped
+2025-06-17 16:10:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-17 16:10:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-17 16:10:47 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-06-17 16:10:47 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36551e97]]
+2025-06-17 16:10:47 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-06-17 16:10:47 INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=data-analyzer-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-17 16:10:47 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-06-17 16:10:47 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for data-analyzer-producer-1 unregistered

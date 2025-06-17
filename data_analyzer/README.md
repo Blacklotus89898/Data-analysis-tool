@@ -20,17 +20,31 @@ docker compose up/down
 - Message broker, coordinated by zookeeper (for the moment)
 - Topic, subscriber, publisher idea
 
+```bash
+curl -X POST -d "Hello Kafka!" http://localhost:8080/kafka/send
+```
+
 ## STOMP
 - Websocket functionality
 - Can broadcast
+```bash
+# Go to
+http://localhost:8080/index.html
 
+```
 
+## RabbitMQ
+- Similar to Kafka
+```bash
+curl -X POST http://localhost:8080/rabbitmq/send -d "hello rabbit" -H "Content-Type: text/plain"
+```
 ## TODO:
 - [ ] Deep dive Kafka -- look into streams
-- [ ] Deep dive RabbitMQ --
+- [ ] Deep dive RabbitMQ -- streams
 - [ ] Deep dive STOMP -- into streams
-- [ ] Jenkins
+- [ ] Jenkins -- CICD pipeline
 - [ ] Kubernetes
+- [ ] Pyspark integration
 
 
 ## For the future
