@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+    
+    environment {
+        DOCKER_HOST = "unix:///var/run/docker.sock"
+    }
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+        buildDiscarder(logRotator(daysToKeepStr: '14'))
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clean workspace first
+                deleteDir()
+                
+                // Clone the repository
+                sh '''
+                    git clone https://github.com/Blacklotus89898/Data-analysis-tool.git .
+                    git checkout main
+                '''
+            }
+        }
+        stage('Start Services') {
+            steps {
+                dir('data_analyzer/containers') {
+                    sh '''
+                        echo "Starting containers..."
+                        docker compose version || docker-compose --version
+                        docker compose up -d || docker-compose up -d
+                    '''
+                }
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                dir('data_analyzer') {
+                    sh './mvnw clean test'
+                }
+            }
+        }
+        stage('Stop Services') {
+            steps {
+                dir('data_analyzer/containers') {
+                    sh 'docker compose down || docker-compose down'
+                }
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                if (fileExists('data_analyzer/target/surefire-reports/*.xml')) {
+                    junit 'data_analyzer/target/surefire-reports/*.xml'
+                }
+            }
+            dir('data_analyzer/containers') {
+                sh 'docker compose down || docker-compose down || true'
+            }
+        }
+    }
+}
