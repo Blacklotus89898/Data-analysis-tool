@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>STOMP Chat</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    #messages { list-style: none; padding: 0; }
+    #messages li { background: #f1f1f1; margin-bottom: 5px; padding: 5px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>STOMP WebSocket Chat</h2>
+  <input type="text" id="msgInput" placeholder="Type a message..." />
+  <button id="sendBtn">Send</button>
+
+  <ul id="messages"></ul>
+
+  <!-- Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+
+  <script>
+    let stompClient;
+
+    window.addEventListener('load', function () {
+      const socket = new SockJS('/ws'); // must match endpoint in WebSocketConfig
+      stompClient = Stomp.over(socket);
+      stompClient.debug = null;
+
+      stompClient.connect({}, function () {
+        console.log("Connected to STOMP");
+
+        stompClient.subscribe('/topic/messages', function (message) {
+          const msg = message.body;
+          const li = document.createElement("li");
+          li.textContent = msg;
+          document.getElementById("messages").appendChild(li);
+        });
+
+        document.getElementById("sendBtn").addEventListener("click", sendMessage);
+      });
+    });
+
+    function sendMessage() {
+      const input = document.getElementById("msgInput");
+      const msg = input.value;
+      if (msg && stompClient && stompClient.connected) {
+        stompClient.send("/app/send", {}, msg);
+        input.value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
