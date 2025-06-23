@@ -28,7 +28,7 @@ docker compose up -d  /down
 curl -X POST -d "Hello Kafka!" http://localhost:9090/kafka/send
 ```
 
-## STOMP
+## STOMP + Redis Caching
 - Websocket functionality
 - Can broadcast
 ```bash
@@ -66,6 +66,7 @@ http://192.168.0.113:9090/jenkins
 - [ ] Deep dive Kafka -- look into streams
 - [ ] Deep dive RabbitMQ -- streams
 - [ ] Deep dive STOMP -- into streams
+- [ ] Server side cashing -- REDIS, potentially: own db implementation and sharding
 - [ ] Jenkins -- CICD pipeline
 - [ ] Kubernetes
 - [ ] Pyspark integration

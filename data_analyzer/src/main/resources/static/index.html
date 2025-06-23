@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>STOMP Chat</title>
   <style>
-    body { font-family: sans-serif; padding: 2em; }
-    #messages { list-style: none; padding: 0; }
-    #messages li { background: #f1f1f1; margin-bottom: 5px; padding: 5px; border-radius: 5px; }
+    body {
+      font-family: sans-serif;
+      padding: 2em;
+    }
+
+    #messages,
+    #cacheMessages {
+      list-style: none;
+      padding: 0;
+    }
+
+    #messages li,
+    #cacheMessages li {
+      background: #f1f1f1;
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #cacheSection {
+      margin-top: 2em;
+    }
   </style>
 </head>
+
 <body>
 
   <h2>STOMP WebSocket Chat</h2>
@@ -17,6 +38,12 @@
 
   <ul id="messages"></ul>
 
+  <div id="cacheSection">
+    <h3>Fetch Messages from Redis Cache</h3>
+    <button id="fetchCacheBtn">Fetch Cached Messages</button>
+    <ul id="cacheMessages"></ul>
+  </div>
+
   <!-- Dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
@@ -24,8 +51,40 @@
   <script>
     let stompClient;
 
+    // Fetch cached messages from Redis via REST API and display in #cacheMessages
+    function fetchCacheMessages() {
+      fetch('/api/messages?count=20')
+        .then(response => response.json())
+        .then(messages => {
+          const cacheList = document.getElementById("cacheMessages");
+          cacheList.innerHTML = "";
+          messages.reverse().forEach(msg => {
+            const li = document.createElement("li");
+            li.textContent = msg;
+            cacheList.appendChild(li);
+          });
+        });
+    }
+
+    // Load cached messages into main chat area (optional, can be removed if not needed)
+    function loadCachedMessages() {
+      fetch('/api/messages?count=20')
+        .then(response => response.json())
+        .then(messages => {
+          const messagesList = document.getElementById("messages");
+          messagesList.innerHTML = "";
+          messages.reverse().forEach(msg => {
+            const li = document.createElement("li");
+            li.textContent = msg;
+            messagesList.appendChild(li);
+          });
+        });
+    }
+
     window.addEventListener('load', function () {
-      const socket = new SockJS('/ws'); // must match endpoint in WebSocketConfig
+      loadCachedMessages();
+
+      const socket = new SockJS('/ws');
       stompClient = Stomp.over(socket);
       stompClient.debug = null;
 
@@ -40,6 +99,7 @@
         });
 
         document.getElementById("sendBtn").addEventListener("click", sendMessage);
+        document.getElementById("fetchCacheBtn").addEventListener("click", fetchCacheMessages);
       });
     });
 
@@ -54,4 +114,5 @@
   </script>
 
 </body>
+
 </html>
