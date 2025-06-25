@@ -1,0 +1,21 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE "User" as User
+RECTANGLE "API Gateway" as Gate
+RECTANGLE "Web Server\n(Frontend)" as Web
+RECTANGLE "Redis Cache" as Cache
+RECTANGLE "Application Server\n(Backend)" as App
+RECTANGLE "Database" as DB
+
+User --> Gate : HTTP Request
+Gate --> Web : HTTP Request
+Web --> App : HTTP Request
+App --> DB : SQL Query
+App --> Cache : Redis Cache Check
+DB --> App : Query Result
+Cache --> App : Cache Result
+App --> Web : Response Data
+Web --> User : HTML Response
+
+@enduml
