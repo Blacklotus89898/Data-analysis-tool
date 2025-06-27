@@ -1,4 +1,10 @@
+server:
+  port: 9090  # Application and Gateway will both run on this port
+
 spring:
+  application:
+    name: data-analyzer
+
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
@@ -9,3 +15,27 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  cloud:
+    gateway:
+      routes:
+        - id: kafka-route
+          uri: http://localhost:9090
+          predicates:
+            - Path=/proxy/kafka/**
+          filters:
+            - StripPrefix=1
+
+        - id: rabbitmq-route
+          uri: http://localhost:9090
+          predicates:
+            - Path=/proxy/rabbitmq/**
+          filters:
+            - StripPrefix=1
+
+        - id: redis-api-route
+          uri: http://localhost:9090
+          predicates:
+            - Path=/proxy/api/messages
+          filters:
+            - StripPrefix=1

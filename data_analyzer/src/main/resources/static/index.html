@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>STOMP Chat</title>
+  <title>WebSocket Chat</title>
   <style>
     body {
       font-family: sans-serif;
@@ -32,7 +32,7 @@
 
 <body>
 
-  <h2>STOMP WebSocket Chat</h2>
+  <h2>WebSocket Chat</h2>
   <input type="text" id="msgInput" placeholder="Type a message..." />
   <button id="sendBtn">Send</button>
 
@@ -44,12 +44,8 @@
     <ul id="cacheMessages"></ul>
   </div>
 
-  <!-- Dependencies -->
-  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
-
   <script>
-    let stompClient;
+    let socket;
 
     // Fetch cached messages from Redis via REST API and display in #cacheMessages
     function fetchCacheMessages() {
@@ -63,10 +59,11 @@
             li.textContent = msg;
             cacheList.appendChild(li);
           });
-        });
+        })
+        .catch(err => console.error("Failed to fetch cached messages:", err));
     }
 
-    // Load cached messages into main chat area (optional, can be removed if not needed)
+    // Load cached messages into main chat area (optional)
     function loadCachedMessages() {
       fetch('/api/messages?count=20')
         .then(response => response.json())
@@ -78,36 +75,44 @@
             li.textContent = msg;
             messagesList.appendChild(li);
           });
-        });
+        })
+        .catch(err => console.error("Failed to load cached messages:", err));
     }
 
     window.addEventListener('load', function () {
       loadCachedMessages();
 
-      const socket = new SockJS('/ws');
-      stompClient = Stomp.over(socket);
-      stompClient.debug = null;
+      // Connect to your backend WebSocket endpoint
+      socket = new WebSocket((location.protocol === "https:" ? "wss://" : "ws://") + location.host + "/ws/endpoint");
 
-      stompClient.connect({}, function () {
-        console.log("Connected to STOMP");
+      socket.onopen = function () {
+        console.log("WebSocket connected");
+      };
 
-        stompClient.subscribe('/topic/messages', function (message) {
-          const msg = message.body;
-          const li = document.createElement("li");
-          li.textContent = msg;
-          document.getElementById("messages").appendChild(li);
-        });
+      socket.onmessage = function (event) {
+        const msg = event.data;
+        const li = document.createElement("li");
+        li.textContent = msg;
+        document.getElementById("messages").appendChild(li);
+      };
 
-        document.getElementById("sendBtn").addEventListener("click", sendMessage);
-        document.getElementById("fetchCacheBtn").addEventListener("click", fetchCacheMessages);
-      });
+      socket.onerror = function (error) {
+        console.error("WebSocket error:", error);
+      };
+
+      socket.onclose = function (event) {
+        console.log("WebSocket closed:", event);
+      };
+
+      document.getElementById("sendBtn").addEventListener("click", sendMessage);
+      document.getElementById("fetchCacheBtn").addEventListener("click", fetchCacheMessages);
     });
 
     function sendMessage() {
       const input = document.getElementById("msgInput");
-      const msg = input.value;
-      if (msg && stompClient && stompClient.connected) {
-        stompClient.send("/app/send", {}, msg);
+      const msg = input.value.trim();
+      if (msg && socket && socket.readyState === WebSocket.OPEN) {
+        socket.send(msg);
         input.value = "";
       }
     }

@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController // Changed from @Controller to @RestController
+import reactor.core.publisher.Mono;
+
+@RestController
 public class STOMPMessageController {
 
     private static final Logger logger = LoggerFactory.getLogger(STOMPMessageController.class);
@@ -23,15 +25,19 @@ public class STOMPMessageController {
 
     @MessageMapping("/send")
     @SendTo("/topic/messages")
-    public String broadcastMessage(String message) {
+    public Mono<String> broadcastMessage(String message) {
         logger.info("### Received: {} ###", message);
-        redisTemplate.opsForList().leftPush("messages", message);
-        return message;
+        return Mono.fromCallable(() -> {
+            redisTemplate.opsForList().leftPush("messages", message);
+            return message;
+        });
     }
 
     @GetMapping("/api/messages")
-    public List<String> getCachedMessages(@RequestParam(defaultValue = "10") int count) {
-        List<String> messages = redisTemplate.opsForList().range("messages", 0, count - 1);
-        return messages != null ? messages : Collections.emptyList();
+    public Mono<List<String>> getCachedMessages(@RequestParam(defaultValue = "10") int count) {
+        return Mono.fromCallable(() -> {
+            List<String> messages = redisTemplate.opsForList().range("messages", 0, count - 1);
+            return messages != null ? messages : Collections.emptyList();
+        });
     }
 }

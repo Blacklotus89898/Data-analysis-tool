@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.blacklotus.data_analyzer.kafka.KafkaProducerService;
 
+import reactor.core.publisher.Mono;
+
 @RestController
 @RequestMapping("/kafka")
 public class KafkaMessageController {
@@ -18,8 +20,10 @@ public class KafkaMessageController {
     }
 
     @PostMapping("/send")
-    public String sendMessage(@RequestBody String message) {
-        producerService.sendMessage(message);
-        return "Message sent to Kafka: " + message;
+    public Mono<String> sendMessage(@RequestBody Mono<String> messageMono) {
+        return messageMono.map(message -> {
+            producerService.sendMessage(message);
+            return "Message sent to Kafka: " + message;
+        });
     }
 }
