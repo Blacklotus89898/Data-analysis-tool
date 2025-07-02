@@ -18,6 +18,8 @@ spring:
 
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
       routes:
         - id: kafka-route
           uri: http://localhost:9090
@@ -39,3 +41,11 @@ spring:
             - Path=/proxy/api/messages
           filters:
             - StripPrefix=1
+            - name: AuthenticationFilter  # Add this
+
+        - id: auth-login
+          uri: http://localhost:9090
+          predicates:
+            - Path=/login
+          filters:
+            - StripPrefix=0  # No filter required, public endpoint

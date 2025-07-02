@@ -17,7 +17,16 @@ docker compose up -d  /down
 
 # Jenkins container
 docker compose up -d  /down
+```
 
+## JWT 
+```bash
+# Obtain token
+curl -v -X POSTv -X POST http://localhost:9090/login   -H "Content-Type: application/json"   -d '{"username": "admin", "password": "password"}'
+
+# Testing
+curl -X GET http://localhostcurl -X GET http://localhost:9090/test-token \
+  -H "Authorization: Bearer <token>>"
 ```
 
 ## Kafka
